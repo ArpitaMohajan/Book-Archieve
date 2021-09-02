@@ -9,7 +9,7 @@ const searchBook = () => {
 
     }
     else {
-        const url = `http://openlibrary.org/search.json?q=${searchText}`
+        const url = `https://openlibrary.org/search.json?q=${searchText}`
         // console.log(url)
         fetch(url)
             .then(res => res.json())
@@ -22,12 +22,7 @@ const searchBook = () => {
         document.getElementById('error-message').style.display = 'block'
     }
 
-    // try {
 
-    //     resultError('error')
-    // }
-    // catch (err) {
-    //     document.getElementById('error-message').innerHTML = err.message;
 }
 const displaySearchResult = docs => {
     console.log(docs.length)
